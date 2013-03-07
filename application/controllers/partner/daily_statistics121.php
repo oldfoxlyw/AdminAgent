@@ -60,8 +60,6 @@ class Daily_statistics121 extends CI_Controller {
 			$result = $this->daily_report->getAllResult($parameter, $itemPerPage, $offset);
 			$parameter['sum'] = 'orders_sum';
 			$ordersSum = $this->daily_report->getAllResult($parameter);
-			var_dump($ordersSum);
-			exit();
 			$this->load->helper('pagination');
 			$pagination = getPage($page, $pageTotal, getQueryString($parameter));
 		}
@@ -73,7 +71,7 @@ class Daily_statistics121 extends CI_Controller {
 			'log_time_start'		=>	$dateStart,
 			'log_time_end'		=>	$dateEnd,
 			'submit_flag'			=>	$submitFlag,
-			'orders_sum'			=>	$ordersSum[0],
+			'orders_sum'			=>	number_format($ordersSum[0]->orders_sum / 100, 2),
 			'result'					=>	$result,
 			'pagination'			=>	$pagination
 		);
