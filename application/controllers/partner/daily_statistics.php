@@ -71,7 +71,7 @@ class Daily_statistics extends CI_Controller {
 			'log_time_start'		=>	$dateStart,
 			'log_time_end'		=>	$dateEnd,
 			'submit_flag'			=>	$submitFlag,
-			'orders_sum'			=>	$ordersSum,
+			'orders_sum'			=>	number_format($ordersSum[0]->orders_sum / 100, 2),
 			'result'					=>	$result,
 			'pagination'			=>	$pagination
 		);
