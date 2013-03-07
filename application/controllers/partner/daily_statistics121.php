@@ -35,6 +35,8 @@ class Daily_statistics121 extends CI_Controller {
 			}
 			$cachedb->where('id', $value->id);
 			$cachedb->update('log_daily_statistics1');
+			
+			echo $cachedb->last_query() . '<br>';
 		}
 	}
 	
