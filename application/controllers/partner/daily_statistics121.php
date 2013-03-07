@@ -16,9 +16,7 @@ class Daily_statistics121 extends CI_Controller {
 		$cachedb->where('server_name', 'f1');
 		$cachedb->where('partner_key', 'ptbus');
 		$result = $cachedb->get('log_daily_statistics1');
-		
-		var_dump($result);
-		exit();
+		$result = $result->result();
 		
 		$lastReg = 0;
 		$lastOrder = 0;
