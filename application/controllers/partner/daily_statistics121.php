@@ -15,7 +15,7 @@ class Daily_statistics121 extends CI_Controller {
 		$cachedb = $this->load->database('logcachedb', TRUE);
 		$cachedb->where('server_name', 'f1');
 		$cachedb->where('partner_key', 'ptbus');
-		$result = $cachedb->get('log_daily_statistics1');
+		$result = $cachedb->get('log_daily_statistics');
 		$result = $result->result();
 		
 		$lastOrder = 10560;
@@ -26,7 +26,7 @@ class Daily_statistics121 extends CI_Controller {
 			
 			$cachedb->set('orders_sum', $orders);
 			$cachedb->where('id', $result[$i]->id);
-			$cachedb->update('log_daily_statistics1');
+			$cachedb->update('log_daily_statistics');
 		}
 	}
 }
