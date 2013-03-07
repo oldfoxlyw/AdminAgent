@@ -33,6 +33,7 @@ class Daily_statistics121 extends CI_Controller {
 			{
 				$cachedb->set('orders_sum', $lastOrder);
 			}
+			$cachedb->where('id', $value->id);
 			$cachedb->update('log_daily_statistics1');
 		}
 	}
