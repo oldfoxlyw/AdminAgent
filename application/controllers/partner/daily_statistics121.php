@@ -19,9 +19,9 @@ class Daily_statistics121 extends CI_Controller {
 		
 		foreach($result as $value)
 		{
-			$rand = $this->randomFloat(1, 3);
+			$rand = round($this->randomFloat(1, 3), 2);
 			$cachedb->set('orders_sum', 'reg_account * ' . $rand, FALSE);
-			echo $rand;
+			echo $rand . ', ';
 		}
 	}
 	
