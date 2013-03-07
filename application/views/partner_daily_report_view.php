@@ -25,10 +25,9 @@
                     <tr>
                     	<td>日期</td>
                     	<td>服务器名</td>
-                        <td>注册数</td>
-                        <td>改名用户数</td>
-                        <td>登录用户数</td>
-                        <td>订单数量</td>
+                        <td>总注册数</td>
+                        <td>总改名用户数</td>
+                        <td>每天登录用户数</td>
                         <td>订单总额</td>
                     </tr>
                 </thead>
@@ -41,7 +40,6 @@
                         <td><?php echo $result[$i]->reg_account; ?></td>
                         <td><?php echo $result[$i]->modify_account; ?></td>
                         <td><?php echo $result[$i]->login_account; ?></td>
-                        <td><?php echo $result[$i]->orders_num; ?></td>
                         <td><?php echo $result[$i]->orders_sum; ?></td>
                     </tr>
                     <?php endfor; ?>
