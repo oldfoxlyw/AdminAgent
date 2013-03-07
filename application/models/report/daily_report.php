@@ -11,10 +11,10 @@ class Daily_report extends CI_Model {
 	}
 	
 	public function getTotal($parameter = null) {
-		if(!empty($parameter['log_date_start'])) {
+		if(!empty($parameter['log_time_start'])) {
 			$this->logcachedb->where('log_date >=', $parameter['log_time_start']);
 		}
-		if(!empty($parameter['log_date_end'])) {
+		if(!empty($parameter['log_time_end'])) {
 			$this->logcachedb->where('log_date <=', $parameter['log_time_end']);
 		}
 		if(!empty($parameter['server_name'])) {
