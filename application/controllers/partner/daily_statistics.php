@@ -23,16 +23,16 @@ class Daily_statistics extends CI_Controller {
 	
 	public function index() {
 		$page = $this->input->get_post('page', TRUE);
-		$dateStart = $this->input->post('log_time_start', TRUE);
-		$dateEnd = $this->input->post('log_time_end', TRUE);
-		$submitFlag = $this->input->post('hiddenSubmitFlag', TRUE);
+		$dateStart = $this->input->get_post('log_time_start', TRUE);
+		$dateEnd = $this->input->get_post('log_time_end', TRUE);
+		$submitFlag = $this->input->get_post('hiddenSubmitFlag', TRUE);
 		
 		if(!empty($submitFlag)) {
 			if(!empty($dateStart)) {
-				$parameter['log_date_start'] = $dateStart;
+				$parameter['log_time_start'] = $dateStart;
 			}
 			if(!empty($dateEnd)) {
-				$parameter['log_date_end'] = $dateEnd;
+				$parameter['log_time_end'] = $dateEnd;
 			}
 			$parameter['partner_key'] = $this->user->partner_key;
 			/**
@@ -61,6 +61,7 @@ class Daily_statistics extends CI_Controller {
 			$parameter['sum'] = 'orders_sum';
 			$ordersSum = $this->daily_report->getAllResult($parameter);
 			$this->load->helper('pagination');
+			$parameter['hiddenSubmitFlag'] = '1';
 			$pagination = getPage($page, $pageTotal, getQueryString($parameter));
 		}
 		
