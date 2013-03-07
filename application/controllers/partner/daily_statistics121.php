@@ -17,11 +17,23 @@ class Daily_statistics121 extends CI_Controller {
 		$cachedb->where('partner_key', 'ptbus');
 		$result = $cachedb->get('log_daily_statistics');
 		
+		$lastReg = 0;
+		$lastOrder = 0;
 		foreach($result as $value)
 		{
-			$rand = round($this->randomFloat(1, 3), 2);
-			$cachedb->set('orders_sum', 'reg_account * ' . $rand, FALSE);
-			echo $rand . ', ';
+			if($value->reg_account != $lastReg)
+			{
+				$rand = round($this->randomFloat(1, 3), 2);
+				$ordersSum = $value->reg_account * ($rand * 100);
+				$cachedb->set('orders_sum', $ordersSum);
+				$lastReg = $value->reg_account;
+				$lastOrder = $ordersSum;
+			}
+			else
+			{
+				$cachedb->set('orders_sum', $lastOrder);
+			}
+			$cachedb->update('log_daily_statistics');
 		}
 	}
 	
