@@ -20,6 +20,7 @@
         </div>
         <?php if($submit_flag == '1'): ?>
         <div class="pad20">
+        	<p>订单总额：<?php echo $orders_sum; ?></p>
         	<table class="fullwidth" cellpadding="0" cellspacing="0" border="0">
                 <thead>
                     <tr>

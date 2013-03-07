@@ -39,6 +39,9 @@ class Daily_report extends CI_Model {
 		if(!empty($parameter['partner_key'])) {
 			$this->logcachedb->where('partner_key', $parameter['partner_key']);
 		}
+		if(!empty($parameter['sum'])) {
+			$this->logcachedb->select_sum($parameter['sum']);
+		}
 		if($limit==0 && $offset==0) {
 			$query = $this->logcachedb->get($this->tableName);
 		} else {
