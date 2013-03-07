@@ -24,7 +24,7 @@ class Daily_statistics121 extends CI_Controller {
 		{
 			if($value->reg_account != $lastReg)
 			{
-				$rand = round($this->randomFloat(1, 3), 2);
+				$rand = round($this->randomFloat(1.5, 2), 2);
 				$ordersSum = $value->reg_account * ($rand * 100);
 				$cachedb->set('orders_sum', $ordersSum);
 				$lastReg = $value->reg_account;
