@@ -42,6 +42,7 @@ class Daily_report extends CI_Model {
 		if(!empty($parameter['sum'])) {
 			$this->logcachedb->select_sum($parameter['sum']);
 		}
+		$this->logcachedb->order_by('log_date', 'desc');
 		if($limit==0 && $offset==0) {
 			$query = $this->logcachedb->get($this->tableName);
 		} else {
