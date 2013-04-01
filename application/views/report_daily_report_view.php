@@ -29,11 +29,14 @@
                     <tr>
                     	<td>日期</td>
                     	<td>服务器名</td>
-                        <td>注册数</td>
-                        <td>改名用户数</td>
-                        <td>登录用户数</td>
-                        <td>订单数量</td>
-                        <td>订单总额</td>
+                        <td>总注册数</td>
+                        <td>总改名用户数</td>
+                        <td>当天活跃用户数（登录数）</td>
+                        <td>次日留存率</td>
+                        <td>当天的充值人数</td>
+                        <td>当天订单数</td>
+                        <td>当天充值金额</td>
+                        <td>ARPU</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,19 +48,22 @@
                         <td><?php echo $result[$i]->reg_account; ?></td>
                         <td><?php echo $result[$i]->modify_account; ?></td>
                         <td><?php echo $result[$i]->login_account; ?></td>
-                        <td><?php echo $result[$i]->orders_num; ?></td>
+                        <td><?php echo number_format($result[$i]->second_survive / 100, 2); ?></td>
+                        <td><?php echo $result[$i]->recharge_account; ?></td>
+                        <td><?php echo $result[$i]->order_count; ?></td>
                         <td><?php echo $result[$i]->orders_sum; ?></td>
+                        <td><?php echo number_format($result[$i]->arpu / 100, 2); ?></td>
                     </tr>
                     <?php endfor; ?>
                 <?php else: ?>
                 	<tr>
-                    	<td colspan="9">没有日志记录</td>
+                    	<td colspan="10">没有日志记录</td>
                     </tr>
                 <?php endif; ?>
                 </tbody>
                 <tfoot>
                 	<tr>
-                    	<td colspan="9"><?php echo $pagination; ?></td>
+                    	<td colspan="10"><?php echo $pagination; ?></td>
                     </tr>
                 </tfoot>
             </table>
