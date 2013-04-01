@@ -48,7 +48,7 @@
                         <td><?php echo $result[$i]->reg_account; ?></td>
                         <td><?php echo $result[$i]->modify_account; ?></td>
                         <td><?php echo $result[$i]->login_account; ?></td>
-                        <td><?php echo number_format($result[$i]->second_survive / 100, 2); ?></td>
+                        <td><?php echo $result[$i]->second_survive . '%'; ?></td>
                         <td><?php echo $result[$i]->recharge_account; ?></td>
                         <td><?php echo $result[$i]->order_count; ?></td>
                         <td><?php echo $result[$i]->orders_current_sum; ?></td>
