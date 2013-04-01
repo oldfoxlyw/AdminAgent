@@ -62,7 +62,7 @@
 			'report_register_statistics', 'report_register_by_time', 'report_register_by_day', 'report_register_detail', 'report_login_detail', 'report_login_statistics', 'report_relogin_statistics', 
 			'report_active_account', 'report_remain_account', 'report_lost_account', 'report_daily_statistics'))): ?> class="current"<?php endif; ?>>
                 <li><a href="<?php echo $root_path; ?>report/daily_statistics">运营概况总览</a></li>
-<!--
+                <!--
                 <li><a href="javascript:void(0)">充值情况</a>
                 	<ul<?php if(in_array($permission_name, array('report_recharge_log', 'report_recharge_daily_statistics', 'report_recharge_account', 'report_daily_statistics'))): ?> class="current"<?php endif; ?>>
                     	<li><a href="<?php echo $root_path; ?>report/recharge_log">玩家充值记录</a></li>
@@ -71,14 +71,12 @@
 						<li class="last"><a href="<?php echo $root_path; ?>report/daily_statistics">各区充值情况统计</a></li>
 					</ul>
                 </li>
--->
                 <li><a href="javascript:void(0)">消费情况</a>
                 	<ul<?php if(in_array($permission_name, array('report_account_buy', 'report_item_statistics'))): ?> class="current"<?php endif; ?>>
                     	<li><a href="<?php echo $root_path; ?>report/account_buy">玩家消费记录</a></li>
                         <li class="last"><a href="<?php echo $root_path; ?>report/item_statistics">道具销售统计</a></li>
                     </ul>
                 </li>
-                <!--
                 <li class="last"><a href="javascript:void(0)">注册登录情况</a>
                 	<ul<?php if(in_array($permission_name, array('report_register_statistics', 'report_register_by_time', 'report_register_by_day', 'report_register_detail', 'report_login_detail',
 					'report_login_statistics', 'report_relogin_statistics', 'report_active_account', 'report_remain_account', 'report_lost_account'))): ?> class="current"<?php endif; ?>>
