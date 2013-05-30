@@ -45,8 +45,24 @@
 | the active record class
 */
 
-$active_group = 'accountdb';
+$active_group = 'webdb';
 $active_record = TRUE;
+
+$db['webdb']['hostname'] = 'localhost';
+$db['webdb']['username'] = 'root';
+$db['webdb']['password'] = '84@41%%wi96^4';
+$db['webdb']['database'] = 'agent1_web_db';
+$db['webdb']['dbdriver'] = 'mysqli';
+$db['webdb']['dbprefix'] = '';
+$db['webdb']['pconnect'] = TRUE;
+$db['webdb']['db_debug'] = TRUE;
+$db['webdb']['cache_on'] = FALSE;
+$db['webdb']['cachedir'] = '';
+$db['webdb']['char_set'] = 'utf8';
+$db['webdb']['dbcollat'] = 'utf8_general_ci';
+$db['webdb']['swap_pre'] = '';
+$db['webdb']['autoinit'] = TRUE;
+$db['webdb']['stricton'] = FALSE;
 
 $db['accountdb']['hostname'] = 'localhost';
 $db['accountdb']['username'] = 'root';
