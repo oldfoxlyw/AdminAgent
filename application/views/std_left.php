@@ -19,7 +19,6 @@
         <li><a href="<?php echo $root_path; ?>index">管理首页</a></li>
         <li><a href="javascript:void(0)">平台设置</a>
         	<ul<?php if(in_array($permission_name, array('setting_partner', 'setting_admin', 'setting_permission'))): ?> class="current"<?php endif; ?>>
-            	<li><a href="<?php echo $root_path; ?>setting/partners">渠道商管理</a></li>
             	<li><a href="<?php echo $root_path; ?>setting/administrators">管理员设置</a></li>
             	<li class="last"><a href="<?php echo $root_path; ?>setting/permissions">权限设置</a></li>
             </ul>
