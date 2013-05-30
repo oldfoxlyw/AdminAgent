@@ -13,7 +13,6 @@ class Admin_user extends CI_Model {
 		if(!empty($userName) && !empty($userPass)) {
 			$this->load->helper('security');
 			$userPass = strtoupper(do_hash(do_hash($userPass, 'md5')));
-			exit($userPass);
 			$this->db->where('user_name', $userName);
 			$this->db->where('user_pass', $userPass);
 			$query = $this->db->get($this->tableName);
