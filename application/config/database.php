@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['accountdb']['hostname'] = 'localhost';
 $db['accountdb']['username'] = 'root';
-$db['accountdb']['password'] = '100200';
+$db['accountdb']['password'] = '84@41%%wi96^4';
 $db['accountdb']['database'] = 'agent1_account_db';
 $db['accountdb']['dbdriver'] = 'mysqli';
 $db['accountdb']['dbprefix'] = '';
@@ -66,7 +66,7 @@ $db['accountdb']['stricton'] = FALSE;
 
 $db['productdb']['hostname'] = 'localhost';
 $db['productdb']['username'] = 'root';
-$db['productdb']['password'] = '100200';
+$db['productdb']['password'] = '84@41%%wi96^4';
 $db['productdb']['database'] = 'agent1_product_db';
 $db['productdb']['dbdriver'] = 'mysqli';
 $db['productdb']['dbprefix'] = '';
@@ -82,7 +82,7 @@ $db['productdb']['stricton'] = FALSE;
 
 $db['fundsdb']['hostname'] = 'localhost';
 $db['fundsdb']['username'] = 'root';
-$db['fundsdb']['password'] = '100200';
+$db['fundsdb']['password'] = '84@41%%wi96^4';
 $db['fundsdb']['database'] = 'agent1_funds_flow_db';
 $db['fundsdb']['dbdriver'] = 'mysqli';
 $db['fundsdb']['dbprefix'] = '';
@@ -98,7 +98,7 @@ $db['fundsdb']['stricton'] = FALSE;
 
 $db['logdb']['hostname'] = 'localhost';
 $db['logdb']['username'] = 'root';
-$db['logdb']['password'] = '100200';
+$db['logdb']['password'] = '84@41%%wi96^4';
 $db['logdb']['database'] = 'agent1_log_db_201201';
 $db['logdb']['dbdriver'] = 'mysqli';
 $db['logdb']['dbprefix'] = '';
@@ -114,7 +114,7 @@ $db['logdb']['stricton'] = FALSE;
 
 $db['adminlog']['hostname'] = 'localhost';
 $db['adminlog']['username'] = 'root';
-$db['adminlog']['password'] = '100200';
+$db['adminlog']['password'] = '84@41%%wi96^4';
 $db['adminlog']['database'] = 'agent1_adminlog_db';
 $db['adminlog']['dbdriver'] = 'mysqli';
 $db['adminlog']['dbprefix'] = '';
@@ -130,7 +130,7 @@ $db['adminlog']['stricton'] = FALSE;
 
 $db['logcachedb']['hostname'] = 'localhost';
 $db['logcachedb']['username'] = 'root';
-$db['logcachedb']['password'] = '100200';
+$db['logcachedb']['password'] = '84@41%%wi96^4';
 $db['logcachedb']['database'] = 'agent1_log_db';
 $db['logcachedb']['dbdriver'] = 'mysqli';
 $db['logcachedb']['dbprefix'] = '';
