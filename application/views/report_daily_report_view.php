@@ -12,8 +12,8 @@
                     	<span>结束时间：</span><input name="log_time_end" type="text" class="sf date_picker" id="log_time_end" value="<?php echo $log_time_end; ?>" />
                     </p>
                     <p>
-                    	<label id="serverName">服务器名</label>
-                        <input class="lf" id="serverName" name="serverName" value="<?php echo $server_name; ?>" />
+                    	<label for="server_name">服务器名</label>
+                        <input class="lf" id="server_name" name="server_name" value="<?php echo $server_name; ?>" />
                     </p>
                     <p>
                         <input class="button" type="submit" id="btnSubmit" name="btnSubmit" value="提交" />

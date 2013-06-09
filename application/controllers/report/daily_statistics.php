@@ -24,9 +24,9 @@ class Daily_statistics extends CI_Controller {
 	
 	public function index() {
 		$page = $this->input->get_post('page', TRUE);
-		$dateStart = $this->input->post('log_time_start', TRUE);
-		$dateEnd = $this->input->post('log_time_end', TRUE);
-		$serverName = $this->input->post('serverName', TRUE);
+		$dateStart = $this->input->get_post('log_time_start', TRUE);
+		$dateEnd = $this->input->get_post('log_time_end', TRUE);
+		$serverName = $this->input->get_post('server_name', TRUE);
 		$submitFlag = $this->input->get_post('hiddenSubmitFlag', TRUE);
 		
 		$parameter['hiddenSubmitFlag'] = $submitFlag;
