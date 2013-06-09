@@ -69,14 +69,14 @@ class Daily_statistics extends CI_Controller {
 		
 		$data = array(
 			'permission_name'	=>	$this->permissionName,
-			'user'						=>	$this->user,
-			'root_path'				=>	$this->root_path,
-			'log_time_start'		=>	$dateStart,
+			'user'				=>	$this->user,
+			'root_path'			=>	$this->root_path,
+			'log_time_start'	=>	$dateStart,
 			'log_time_end'		=>	$dateEnd,
-			'server_name'			=>	$serverName,
-			'submit_flag'			=>	$submitFlag,
-			'result'					=>	$result,
-			'pagination'			=>	$pagination
+			'server_name'		=>	$serverName,
+			'submit_flag'		=>	$submitFlag,
+			'result'			=>	$result,
+			'pagination'		=>	$pagination
 		);
 		$this->render->render('report_daily_report', $data);
 	}
