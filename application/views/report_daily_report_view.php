@@ -15,7 +15,7 @@
                     	<label id="serverName">服务器名</label>
                         <select class="dropdown" id="serverName" name="serverName">
                         <?php foreach($server_result as $row): ?>
-                        	<option value="<?php echo $row->server_name; ?>"><?php echo lang('server_list_' . $row->server_name); ?></option>
+                        	<option value="<?php echo $row->server_name; ?>"><?php echo $row->server_name; ?></option>
                         <?php endforeach; ?>
                         </select>
                     </p>
