@@ -66,6 +66,10 @@ class Daily_statistics extends CI_Controller {
 			$this->load->helper('pagination');
 			$pagination = getPage($page, $pageTotal, getQueryString($parameter));
 		}
+		$this->load->helper('language');
+		$this->load->lang('server_list');
+		$this->load->model('maintenance/server');
+		$serverResult = $this->server->getAllResult();
 		
 		$data = array(
 			'permission_name'	=>	$this->permissionName,
@@ -73,6 +77,7 @@ class Daily_statistics extends CI_Controller {
 			'root_path'				=>	$this->root_path,
 			'log_time_start'		=>	$dateStart,
 			'log_time_end'		=>	$dateEnd,
+			'server_result'			=>	$serverResult,
 			'server_name'			=>	$serverName,
 			'submit_flag'			=>	$submitFlag,
 			'result'					=>	$result,

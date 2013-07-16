@@ -13,7 +13,11 @@
                     </p>
                     <p>
                     	<label id="serverName">服务器名</label>
-                        <input class="lf" id="serverName" name="serverName" value="<?php echo $server_name; ?>" />
+                        <select class="dropdown" id="serverName" name="serverName">
+                        <?php foreach($server_result as $row): ?>
+                        	<option value="<?php echo $row->server_name; ?>"><?php echo lang('server_list_' . $row->server_name); ?></option>
+                        <?php endforeach; ?>
+                        </select>
                     </p>
                     <p>
                         <input class="button" type="submit" id="btnSubmit" name="btnSubmit" value="提交" />
