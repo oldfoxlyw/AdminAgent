@@ -67,7 +67,7 @@ class Daily_statistics extends CI_Controller {
 			$pagination = getPage($page, $pageTotal, getQueryString($parameter));
 		}
 		$this->load->helper('language');
-		$this->load->lang('server_list');
+		$this->lang->load('server_list');
 		$this->load->model('maintenance/server');
 		$serverResult = $this->server->getAllResult();
 		
